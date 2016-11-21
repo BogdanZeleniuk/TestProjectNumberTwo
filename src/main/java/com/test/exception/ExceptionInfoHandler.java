@@ -23,7 +23,7 @@ public class ExceptionInfoHandler {
         return logAndGetErrorInfo(req, e, false);
     }
 
-    @ResponseStatus(value = HttpStatus.CONFLICT)  // 409
+    @ResponseStatus(value = HttpStatus.CONFLICT)  // status 409
     @ExceptionHandler(DataIntegrityViolationException.class)
     @ResponseBody
     @Order(Ordered.HIGHEST_PRECEDENCE + 1)
@@ -32,7 +32,7 @@ public class ExceptionInfoHandler {
     }
 
 
-    @ResponseStatus(value = HttpStatus.BAD_REQUEST)  // 400
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)  // status 400
     @ExceptionHandler(UnsatisfiedServletRequestParameterException.class)
     @ResponseBody
     @Order(Ordered.HIGHEST_PRECEDENCE + 2)
@@ -40,7 +40,7 @@ public class ExceptionInfoHandler {
         return logAndGetErrorInfo(req, e, true);
     }
 
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR) // status 500
     @ExceptionHandler(Exception.class)
     @ResponseBody
     @Order(Ordered.LOWEST_PRECEDENCE)

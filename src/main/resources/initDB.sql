@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS contacts;
+DROP SEQUENCE IF EXISTS start_seq;
+
+CREATE SEQUENCE start_seq START 1;
+CREATE TABLE IF NOT EXISTS contacts
+(
+  id      INTEGER PRIMARY KEY NOT NULL DEFAULT nextval('start_seq'),
+  name    VARCHAR NOT NULL
+);

@@ -18,8 +18,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes= SpringBootWebApplication.class)
 public class ContactControllerTest extends AbstractContactControllerTest{
 
     private static final String REST_URL = "/contacts";

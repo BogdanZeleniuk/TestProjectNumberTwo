@@ -8,10 +8,8 @@ services:
 addons:
 postgresql: "9.4"
 
-postgres:
-  adapter: postgresql
-  database: hello
-  username: postgres
+deploy:
+  app: ci-spring-boot
 
 before_script:
 - psql -c 'create database hello;' -U postgres

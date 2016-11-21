@@ -1,3 +1,9 @@
 language: java
 script: mvn clean verify
 jdk: oraclejdk8
+
+services:
+- postgresql
+
+before_script:
+- psql -c 'create database hello;' -U postgres

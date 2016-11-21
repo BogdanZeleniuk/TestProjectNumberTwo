@@ -1,4 +1,5 @@
 
+[![Build Status](https://travis-ci.org/BogdanZeleniuk/TestProjectNumberTwo.svg?branch=master)](https://travis-ci.org/BogdanZeleniuk/TestProjectNumberTwo)
 
 Написать REST сервис hello с ресурсом /hello/contacts?nameFilter=val
 Запрос к contacts должен возвращать контакты из таблицы БД contacts. Параметр nameFilter обязателен. 

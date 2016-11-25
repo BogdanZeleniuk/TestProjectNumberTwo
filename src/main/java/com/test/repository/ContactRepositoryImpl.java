@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -15,6 +16,7 @@ import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 
 @Repository
+@Transactional(readOnly = true)
 public class ContactRepositoryImpl implements ContactRepository{
 
     private static final Logger LOG = LoggerFactory.getLogger(ContactRepositoryImpl.class);

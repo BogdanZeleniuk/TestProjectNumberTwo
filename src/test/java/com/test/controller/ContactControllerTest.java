@@ -1,15 +1,11 @@
 package com.test.controller;
 
 import com.test.ContactTestData;
-import com.test.SpringBootWebApplication;
 import com.test.service.ContactService;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Arrays;
 
@@ -77,7 +73,7 @@ public class ContactControllerTest extends AbstractContactControllerTest{
     public void testRegexException() throws Exception {
         mockMvc.perform(get(REST_URL)
                 .param("nameFilter", PARAMETER_FAKE))
-                .andExpect(status().isOk())
+                .andExpect(status().is4xxClientError())
                 .andDo(print());
     }
 

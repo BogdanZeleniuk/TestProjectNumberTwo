@@ -7,4 +7,3 @@ services:
 
 before_script:
 - psql -c 'create database hello;' -U postgres
-- psql -c 'create table contacts;' -U postgres

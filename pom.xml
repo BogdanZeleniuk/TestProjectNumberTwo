@@ -62,7 +62,14 @@
         <groupId>javax.servlet</groupId>
         <artifactId>jstl</artifactId>
     </dependency>
-    <!-- Spring Boot JPA -->
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.0.11.Final</version>
+        </dependency>
+
+        <!-- Spring Boot JPA -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-data-jpa</artifactId>

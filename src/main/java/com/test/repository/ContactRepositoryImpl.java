@@ -39,7 +39,7 @@ public class ContactRepositoryImpl implements ContactRepository{
         }
         catch (PatternSyntaxException exception){
             LOG.error("Regex parameter " + "'" + nameFilter + "'" + " is invalid");
-            return null;
+            throw new NotFoundException("Regex parameter is invalid");
         }
     }
 

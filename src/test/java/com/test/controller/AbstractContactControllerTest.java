@@ -38,6 +38,7 @@ public class AbstractContactControllerTest {
 
     @Before
     public void setUp() throws Exception {
+        proxyContactRepository.deleteAll();
         for (Contact contact : ContactTestData.CONTACTS){
             proxyContactRepository.save(contact);
         }

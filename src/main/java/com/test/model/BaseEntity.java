@@ -9,10 +9,6 @@ public class BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "start_seq")
     @SequenceGenerator(name = "start_seq", sequenceName = "start_seq")
-//    @GenericGenerator(
-//            name = "start_seq",
-//            strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator"
-//    )
     protected Integer id;
 
     public BaseEntity() {

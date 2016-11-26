@@ -1,4 +1,3 @@
-
 [![Build Status](https://travis-ci.org/BogdanZeleniuk/TestProjectNumberTwo.svg?branch=master)](https://travis-ci.org/BogdanZeleniuk/TestProjectNumberTwo)
 
 Написать REST сервис hello с ресурсом /hello/contacts?nameFilter=val
@@ -34,8 +33,7 @@ Contact
 
 Для того, чтобы развернуть БД необходимо: 
 ---> создать БД "hello";
----> изменить логин и пароль к БД "hello" в com.test.util.JpaConfig(64,65) 
+---> изменить логин и пароль к БД "hello" в application.properties 
 (если они отличаються от login: postgres, password: password);
----> запустить initDB.sql и populateDB.sql;
 Для того, чтобы запустить приложение необходимо: 
 ---> запустить метод "main";

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/main/resources/initDB.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/populateDB.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/data-h2.sql" dialect="H2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/data.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/schema-h2.sql" dialect="H2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/schema.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/test/controller/AbstractContactControllerTest.java" dialect="H2" />
   </component>
 </project>

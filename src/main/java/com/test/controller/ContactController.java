@@ -10,12 +10,12 @@ import java.util.List;
 public class ContactController extends AbstractContactController{
 
     @RequestMapping(method = RequestMethod.GET, params = "nameFilter")
-    public List<Contact> getSortedPage(@RequestParam("nameFilter") String nameFilter){
+    public @ResponseBody List<Contact> getSortedPage(@RequestParam("nameFilter") String nameFilter){
         return super.getAllSorted(nameFilter);
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Contact> getAllPage(){
+    public @ResponseBody List<Contact> getAllPage(){
         return super.getAll();
     }
 }

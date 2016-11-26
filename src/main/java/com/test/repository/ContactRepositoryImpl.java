@@ -5,6 +5,7 @@ import com.test.model.Contact;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,7 @@ import java.util.stream.Collectors;
 
 @Repository
 @Transactional(readOnly = true)
+@Profile({"postgresql","h2"})
 public class ContactRepositoryImpl implements ContactRepository{
 
     private static final Logger LOG = LoggerFactory.getLogger(ContactRepositoryImpl.class);

@@ -1,12 +1,16 @@
 package com.test.controller;
 
+import com.test.ContactTestData;
 import com.test.SpringBootWebApplication;
+import com.test.model.Contact;
 import com.test.repository.ProxyContactRepository;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -19,8 +23,8 @@ import javax.annotation.PostConstruct;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes= SpringBootWebApplication.class)
 @DataJpaTest
-@ActiveProfiles("H2")
-//@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
+@ActiveProfiles("h2")
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class AbstractContactControllerTest {
     private static final CharacterEncodingFilter CHARACTER_ENCODING_FILTER = new CharacterEncodingFilter();
 
@@ -32,12 +36,12 @@ public class AbstractContactControllerTest {
         CHARACTER_ENCODING_FILTER.setForceEncoding(true);
     }
 
-//    @Before
-//    public void setUp() throws Exception {
-//        for (Contact contact : ContactTestData.CONTACTS){
-//            proxyContactRepository.save(contact);
-//        }
-//    }
+    @Before
+    public void setUp() throws Exception {
+        for (Contact contact : ContactTestData.CONTACTS){
+            proxyContactRepository.save(contact);
+        }
+    }
 
     protected MockMvc mockMvc;
 

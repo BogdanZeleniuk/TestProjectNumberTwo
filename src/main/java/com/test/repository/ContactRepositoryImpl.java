@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 @Repository
 @Transactional(readOnly = true)
-@Profile({"postgresql","H2"})
+@Profile({"postgresql","h2"})
 public class ContactRepositoryImpl implements ContactRepository{
 
     private static final Logger LOG = LoggerFactory.getLogger(ContactRepositoryImpl.class);

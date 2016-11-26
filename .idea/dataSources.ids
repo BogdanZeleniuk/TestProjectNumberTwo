@@ -10,34 +10,34 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>16190</introspection-state-number>
-        <introspection-timestamp>2016-11-26.13:27:00.835</introspection-timestamp>
+        <introspection-state-number>16230</introspection-state-number>
+        <introspection-timestamp>2016-11-26.15:17:41.742</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="hibernate_sequence">
         <object-id>56103</object-id>
         <state-number>16110</state-number>
       </sequence>
       <sequence id="4" parent="2" name="start_seq">
-        <object-id>56255</object-id>
-        <state-number>16189</state-number>
+        <object-id>56334</object-id>
+        <state-number>16229</state-number>
       </sequence>
       <table id="5" parent="2" name="contacts">
-        <object-id>56257</object-id>
-        <state-number>16190</state-number>
+        <object-id>56336</object-id>
+        <state-number>16230</state-number>
       </table>
       <column id="6" parent="5" name="id">
-        <state-number>16190</state-number>
+        <state-number>16230</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;start_seq&apos;::regclass)</default-expression>
       </column>
       <column id="7" parent="5" name="name">
-        <state-number>16190</state-number>
+        <state-number>16230</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
       </column>
       <index id="8" parent="5" name="contacts_pkey">
-        <object-id>56264</object-id>
+        <object-id>56343</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
